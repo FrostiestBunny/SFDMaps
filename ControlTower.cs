@@ -8,10 +8,10 @@ public void onReady(TriggerArgs args) {
 	players = Game.GetPlayers();
 	IObject[] temp = Game.GetObjectsByName("TimerTrigger");
 	timer = (IObjectTimerTrigger)temp[0];
-	Random rand = new Random();
+	Random rand = new Random();/*
 	int toBeChosen = rand.Next(players.Length);
 	Vector2 pos = new Vector2(0, 200);
-	players[toBeChosen].SetWorldPosition(pos);
+	players[toBeChosen].SetWorldPosition(pos);*/
 }
 
 public void onButtonL(TriggerArgs args) {
@@ -49,11 +49,11 @@ public void onButtonR(TriggerArgs args) {
 
 public void onTimer(TriggerArgs args) {
 	for (int i = 0; i < team1Players.Count; i++) {
-		Vector2 pos = new Vector2(-312+i*8, -180);
+		Vector2 pos = new Vector2(-312+i*8, -140);
 		team1Players[i].SetWorldPosition(pos);
 	}
 	for (int i = 0; i < team2Players.Count; i++) {
-		Vector2 pos = new Vector2(312-i*8, -180);
+		Vector2 pos = new Vector2(312-i*8, -140);
 		team2Players[i].SetWorldPosition(pos);
 	}
 }
